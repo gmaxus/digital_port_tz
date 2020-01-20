@@ -8,6 +8,7 @@ Vagrant.configure("2") do |config|
    config.vm.synced_folder "../site", "/var/www/liam"
 
    config.vm.provision "shell", path: "additional_packages.sh"
-   config.vm.provision "shell", path: "mysql.sh"
-   config.vm.provision "shell", path: "laravel.sh"
+   config.vm.provision "shell", path: "../site/provision/mysql.sh"
+   config.vm.provision "shell", path: "../site/provision/composer.sh"
+   config.vm.provision "shell", path: "../site/provision/laravel.sh"
 end
