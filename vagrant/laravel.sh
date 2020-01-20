@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-composer create-project --prefer-dist laravel/laravel /var/www/digitalport
+composer create-project --prefer-dist laravel/laravel /var/www/liam
 
 echo 'server {
     listen 80;
-    server_name www.digitalport.local;
-    root /var/www/digitalport/public;
+    server_name www.liam.local;
+    root /var/www/liam/public;
 
     add_header X-Frame-Options "SAMEORIGIN";
     add_header X-XSS-Protection "1; mode=block";
